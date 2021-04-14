@@ -1,24 +1,19 @@
 # dioha-weather
+Help farmers, agro-workers and researchers to view weather and soil data for GPS coordinates. 
 
-## Project setup
-```
-npm install
-```
+Receives data from [Openweather](https://openweather.org)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Other to explore
+[Satellite imagery](https://github.com/sentinel-hub/sentinelhub-js/)
+[Maptiler free satellite imagery](https://www.maptiler.com/industry/satellite/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Prototype
+[Figma][https://figma.com/]
 
-### Lints and fixes files
-```
-npm run lint
-```
+## designer & developer
+Odafe Aror
+[Website](odafe41.com)
+[LinkedIn](https://linkedin.com/in/odafe-aror)
 
-### Customize configuration
+### Customize configuration and installation
 See [Configuration Reference](https://cli.vuejs.org/config/).
