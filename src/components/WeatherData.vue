@@ -1,34 +1,25 @@
-// Load weather data
-// temperature, humidity, wind, soil, precipitation, sunshine
-
-// API = 96a48c318d68e56df958bd46acc529d2
-// api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+// Display weather data
 
 <template>
-  <!-- <h1>Weather data</h1>
-    <ul>
-        <li>{{location.lat}}</li>
-        <li>{{location.long}}</li>
-    </ul> -->
-
+ 
   <div class="data-panels-frame">
     
     
     <div class="data-panel">
         <p class="data-type">temperature</p>
-        <h4 class="data-value">{{weather.main.temp}}<span class="data-unit">F</span></h4>
+        <h4 class="data-value">{{locationData.main.temp}}<span class="data-unit">F</span></h4>
         <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p>
     </div>
 
     <div class="data-panel">
         <p class="data-type">humidity</p>
-        <h4 class="data-value">{{weather.main.humidity}}<span class="data-unit">%</span></h4>
+        <h4 class="data-value">{{locationData.main.humidity}}<span class="data-unit">%</span></h4>
         <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p>
     </div>
 
     <div class="data-panel">
         <p class="data-type">wind</p>
-        <h4 class="data-value">{{weather.wind.speed}}<span class="data-unit">{{weather.wind.deg}}</span></h4>
+        <h4 class="data-value">{{locationData.wind.speed}}<span class="data-unit">{{locationData.wind.deg}}</span></h4>
         <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p>
     </div>
 
@@ -53,80 +44,16 @@
 </template>
 
 <script>
-// import useLocation from "../modules/location"
+import useLocation from "../modules/location"
 export default {
   name: 'WeatherData',
-//   async setup() {
-//     const {location, error, load}  = useLocation();
+  async setup() {
+    const {locationData, error, load}  = useLocation();
 
-//     await load();
+    await load();
 
-//     return {location, error};
-//   },
-  props: {
-    type: String,
-    // location: Object,
+    return {locationData, error};
   },
-  data() {
-      return {
-          weather: {
-                "coord": {
-                    "lon": 3.4064,
-                    "lat": 6.4654
-                },
-                "weather": [
-                    {
-                        "id": 803,
-                        "main": "Clouds",
-                        "description": "broken clouds",
-                        "icon": "04d"
-                    }
-                ],
-                "base": "stations",
-                "main": {
-                    "temp": 304.15,
-                    "feels_like": 310.75,
-                    "temp_min": 304.15,
-                    "temp_max": 304.15,
-                    "pressure": 1012,
-                    "humidity": 70
-                },
-                "visibility": 10000,
-                "wind": {
-                    "speed": 2.57,
-                    "deg": 270
-                },
-                "clouds": {
-                    "all": 75
-                },
-                "dt": 1618392198,
-                "sys": {
-                    "type": 1,
-                    "id": 1185,
-                    "country": "NG",
-                    "sunrise": 1618378721,
-                    "sunset": 1618422848
-                },
-                "timezone": 3600,
-                "id": 2332459,
-                "name": "Lagos",
-                "cod": 200
-            },
-          weather2: {}
-      }
-  },
-  mounted() {
-    //   const apiKey = '96a48c318d68e56df958bd46acc529d2';
-    //   let a = this;
-    //   console.log(a.location.lat + " " + a.location.long)
-      
-    //   fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + a.location.lat + '&lon=' + a.location.long + '&appid=' + apiKey)
-    //     .then(res => res.json())
-    //     .then(data => this.weather = data)
-    //     .catch(err => console.log(err.message))
-
-   
-  }
 }
 </script>
 

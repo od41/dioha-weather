@@ -2,11 +2,13 @@
 // long = 3.406448
 <template>
   <Navbar/>
-  <section class="container">
-    <TopBar :location="coords" />
-    <Map :location="coords"/>
-    <WeatherData :location="coords"/>
-  </section>
+  <Suspense>
+    <section class="container">
+      <TopBar :location="coords" />
+      <Map :location="coords"/>
+      <WeatherData :location="coords"/>
+    </section>
+  </Suspense>
   
 </template>
 
