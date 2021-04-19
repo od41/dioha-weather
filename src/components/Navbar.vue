@@ -32,7 +32,7 @@ export default {
     display: flex;
     justify-content: center;
     position: relative;
-    padding: 34px 0;
+    padding: 14px 0;
     width: 860px;
     min-width: 860px;
     margin: 0 auto;
@@ -40,7 +40,7 @@ export default {
   }
 
   .logo {
-    height: 46px;
+    height: 24px;
     width: auto;
   }
 
@@ -53,16 +53,17 @@ export default {
     position: absolute;
     align-items: center;
     right: 0;
-    top: 44px;
+    top: 14px;
   }
 
   .user-container img{
-    width: 28px;
-    margin-left: 12px;
+    width: 20px;
+    margin-left: 8px;
   }
 
   .user-container span{
     color: #142105;
+    font-size: 0.9rem;
   }
 
   .user-container:hover{

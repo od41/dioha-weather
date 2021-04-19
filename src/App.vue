@@ -1,10 +1,10 @@
-// lat = 6.465422
-// long = 3.406448
+// Lagos >> lat = 6.465422 long = 3.406448
+// New york >> {lat: 40.7128, long: 74.0060}
 <template>
   <Navbar/>
   <Suspense>
     <section class="container">
-      <TopBar :location="coords" />
+      <TopBar :coords="coords" />
       <Map :location="coords"/>
       <WeatherData :location="coords"/>
     </section>
@@ -28,7 +28,7 @@ export default {
   },
   data(){
     return {
-      coords: {lat: 6.465422, long: 3.406448}
+      coords: {lat: 40.730610, long: -73.935242}
     }
   }
 }

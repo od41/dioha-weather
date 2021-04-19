@@ -8,19 +8,19 @@
     <div class="data-panel">
         <p class="data-type">temperature</p>
         <h4 class="data-value">{{locationData.main.temp}}<span class="data-unit">F</span></h4>
-        <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p>
+        <!-- <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p> -->
     </div>
 
     <div class="data-panel">
         <p class="data-type">humidity</p>
         <h4 class="data-value">{{locationData.main.humidity}}<span class="data-unit">%</span></h4>
-        <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p>
+        <!-- <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p> -->
     </div>
 
     <div class="data-panel">
         <p class="data-type">wind</p>
         <h4 class="data-value">{{locationData.wind.speed}}<span class="data-unit">{{locationData.wind.deg}}</span></h4>
-        <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p>
+        <!-- <p class="data-excerpt">Varius vel ut nunc id in euismod. Viverra.</p> -->
     </div>
 
     <!-- <div class="data-panel">
@@ -50,7 +50,7 @@ export default {
   async setup() {
     const {locationData, error, load}  = useLocation();
 
-    await load();
+    await load(51.5074, 0.1278);
 
     return {locationData, error};
   },

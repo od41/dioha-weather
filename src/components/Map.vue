@@ -49,8 +49,19 @@ export default {
     /* background: #ccc url('../assets/map-static.png') no-repeat center center; */
     /* background-color: #ccc; */
     width: 100%;
-    height: 600px;
+    height: 50vh;
     border-radius: 8px;
     margin-bottom: 48px;
+}
+
+#map > div.mapboxgl-control-container {
+  display: none;
+  opacity: 0;
+}
+
+#map .mapboxgl-control-container {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 </style>

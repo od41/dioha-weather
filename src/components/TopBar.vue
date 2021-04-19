@@ -4,7 +4,7 @@
       <div class="frame-icon"><img src="../assets/location.png" /></div>
       <div class="frame-data">
         <p class="frame-title">Location</p>
-        <p class="frame-value">Lagos<span>NG</span></p>
+        <p class="frame-value">{{locationData.name}}<span>{{locationData.sys.country}}</span></p>
       </div>
     </div>
 
@@ -28,10 +28,18 @@
 </template>
 
 <script>
+import useLocation from "../modules/location"
 export default {
   name: 'TopBar',
+  async setup(props) {
+    const {locationData, error, load} = useLocation();
+    
+    await load(props.coords.lat, props.coords.long)
+
+    return {locationData, error}
+  },
   props: {
-    location: Object,
+    coords: Object, // the latitude and longitude for a location
   },
   data() {
     return {
