@@ -1,30 +1,23 @@
 // Lagos >> lat = 6.465422 long = 3.406448
 // New york >> {lat: 40.7128, long: 74.0060}
 <template>
-  <Navbar/>
-  <Suspense>
-    <section class="container">
-      <TopBar :coords="coords" />
-      <Map :location="coords"/>
-      <WeatherData :location="coords"/>
-    </section>
-  </Suspense>
+  <Navbar />
+  
+  <router-view />
+  <!-- <Dashboard :coords="coords" /> -->
   
 </template>
 
 <script>
+// import Dashboard from './views/Dashboard.vue'
 import Navbar from './components/Navbar.vue'
-import TopBar from './components/TopBar.vue'
-import WeatherData from './components/WeatherData.vue'
-import Map from './components/Map.vue'
+
 
 export default {
   name: 'App',
   components: {
+    // Dashboard,
     Navbar,
-    TopBar,
-    WeatherData,
-    Map
   },
   data(){
     return {
@@ -36,21 +29,28 @@ export default {
 
 <style>
 
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
   body, * {
     margin: 0;
+  }
+
+  body {
+    background: #EFEFEF;
   }
 
   .container {
     width: 860px;
     min-width: 860px;
     margin: 0 auto;
+
   }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #142105;
   /* margin-top: 60px; */
 }
 </style>

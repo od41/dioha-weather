@@ -1,13 +1,15 @@
 <template>
   <div class="container">
     <div class="inner-container">
-      <img class="logo" alt="dioha logo" src="../assets/logo.png">
-
+      <router-link to="/" >
+        <img class="logo" alt="dioha logo" src="../assets/logo.png">
+      </router-link>
       <div class="user-container">
         <span>Guest</span>
         <img src="../assets/user.png" />
       </div>
     </div>
+    <!-- <div><router-link to="/inputlocation">Input</router-link></div> -->
   </div>
   
 </template>
@@ -26,6 +28,9 @@ export default {
     /* height: 116px; */
     margin-bottom: 24px;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .inner-container {
