@@ -3,7 +3,7 @@
         <section class="container">
             <TopBar :coords="coords" />
             <Map :location="coords"/>
-            <WeatherData :location="coords"/>
+            <WeatherData :coords="coords"/>
         </section>
   </Suspense>
 </template>
@@ -29,8 +29,6 @@ export default {
     },
     created() {
         this.coords = this.$route.params
-        // console.log(this.$route.params.data)
-        console.log(this.coords)
     },
 }
 </script>

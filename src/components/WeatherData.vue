@@ -47,12 +47,16 @@
 import useLocation from "../modules/location"
 export default {
   name: 'WeatherData',
-  async setup() {
+  async setup(props) {
     const {locationData, error, load}  = useLocation();
 
-    await load(51.5074, 0.1278);
+     await load(props.coords.lat, props.coords.long)
 
     return {locationData, error};
+  },
+  
+  props: {
+    coords: Object, // the latitude and longitude for a location
   },
 }
 </script>
