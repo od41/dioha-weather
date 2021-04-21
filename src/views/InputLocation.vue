@@ -3,10 +3,14 @@
         <form @submit.prevent="onSubmit" id="coords-form">
             <!-- <img src="../assets/logo.png" alt="Dioha logo" class="logo"/> -->
             <label for="lat">Latitude</label>
-            <input id="lat" type="number" min=-90 max=90 step="any" placeholder="Latitiude" v-model="lat"  />
+            <input id="lat" type="number" min=-90 max=90 step="any" placeholder="Latitiude" v-model="lat"  required/>
+            
             <label for="long">Longitude</label>
-            <input id="long" type="number" min=-180 max=180 step="any" placeholder="Longitude" v-model="long" />
+            <input id="long" type="number" min=-180 max=180 step="any" placeholder="Longitude" v-model="long" required/>
             <button type="submit">Find Location</button>
+            <div class="error-message">
+                Error! Fields can't be empty.
+            </div>
         </form>
         
         <div class="overlay"></div>
@@ -24,6 +28,16 @@
         },
         methods: {
             onSubmit() {
+                // check if fields are empty
+                // if(this.lat == "" && this.long == "") {
+                //     console.log(`they're null`)
+                //     console.log(this.lat, this.long)
+                    
+                // } else {
+                //     console.log('not null')
+                //     console.log(this.lat, this.long)
+                // }
+                // send data and forward to dashboard component
                 this.$router.push({name: 'Dashboard', params: {lat: this.lat, long: this.long}})
             }
         }
@@ -104,5 +118,14 @@
         font-size: 1.1rem;
         width: 100%;
         color: #fff;
+    }
+
+    .error-message {
+        color: #E01313;
+        font-size: 0.8rem;
+        text-align: center;
+        width: 100%;
+        display: none;
+        opacity: 0;
     }
 </style>

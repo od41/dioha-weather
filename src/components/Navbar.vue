@@ -90,5 +90,6 @@ export default {
     font-size: 1rem;
     width: 100%;
     color: #fff;
+    cursor: pointer;
     }
 </style>

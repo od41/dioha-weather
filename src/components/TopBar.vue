@@ -59,7 +59,6 @@ export default {
       time = localeTime.substring(0, 5)
 
       const timeOfDay = localeTime.slice(-2);
-      console.log('time', time)
 
       hour = current.getHours()
       minute = current.getMinutes()

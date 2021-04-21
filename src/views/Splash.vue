@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <img src="../assets/logo-white.png" alt="Dioha logo" class="logo"/>
+        <div style="margin-top:0.8rem;">
+            <router-link to="/InputLocation" class="start-button">Start</router-link>
+        </div>
     </div>
 </template>
 
@@ -32,5 +35,17 @@
     .logo {
         width: 160px;
         margin-top: 8rem;
+    }
+
+    .start-button {
+        background: #fff;
+        border-radius: 4px;
+        border: 0;
+        padding: 6px 16px;
+        /* margin-top: 2rem; */
+        font-size: 1rem;
+        width: 100%;
+        color: #20320A;
+        text-decoration: none;
     }
 </style>
