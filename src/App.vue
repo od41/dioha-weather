@@ -1,7 +1,7 @@
 // Lagos >> lat = 6.465422 long = 3.406448
 // New york >> {lat: 40.7128, long: 74.0060}
 <template>
-  <Navbar />
+  <!-- <Navbar /> -->
   
   <router-view />
   <!-- <Dashboard :coords="coords" /> -->
@@ -10,14 +10,14 @@
 
 <script>
 // import Dashboard from './views/Dashboard.vue'
-import Navbar from './components/Navbar.vue'
+// import Navbar from './components/Navbar.vue'
 
 
 export default {
   name: 'App',
   components: {
     // Dashboard,
-    Navbar,
+    // Navbar,
   },
   data(){
     return {

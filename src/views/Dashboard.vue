@@ -1,6 +1,7 @@
 <template>
+  <Navbar />
      <Suspense>
-        <section class="container">
+        <section id="dashboard-container" class="container">
             <TopBar :coords="coords" />
             <Map :location="coords"/>
             <WeatherData :coords="coords"/>
@@ -12,13 +13,15 @@
 import TopBar from '../components/TopBar.vue'
 import WeatherData from '../components/WeatherData.vue'
 import Map from '../components/Map.vue'
+import Navbar from '../components/Navbar.vue'
 
 export default {
     name: 'Dashboard',
     components: {
         TopBar,
         WeatherData,
-        Map
+        Map,
+        Navbar
     },
     data() {
         return {
@@ -34,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-    .container {
+    #dashboard-container {
         margin-top: 6rem;
     }
 </style>
