@@ -35,6 +35,8 @@ export default {
     margin: 0;
   }
 
+  /* cosmetic */
+
   body {
     background: #EFEFEF;
   }
