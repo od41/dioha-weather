@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <img src="../assets/logo.png" alt="Dioha logo" class="logo"/>
+        <img src="../assets/logo-white.png" alt="Dioha logo" class="logo"/>
     </div>
 </template>
 
@@ -15,15 +15,16 @@
             }
         },
         mounted() {
-            this.loadNext()
+            // this.loadNext()
         }
     }
 </script>
 
 <style scoped>
     .container {
-        background: #EEF676 url('../assets/splash-illustration.png');
+        background: #20320A url('../assets/splash-illustration--2.png');
         background-size: cover;
+        background-position: -10% 60%;
         width: 100%;
         height: 100vh;
     }
